@@ -1,8 +1,8 @@
-Restberry-Web-Express
-=====================
+Restberry-Express
+=================
 
 ## Install
 
 ```
-npm install restberry-web-express
+npm install restberry-express
 ```
