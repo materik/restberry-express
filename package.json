@@ -1,19 +1,10 @@
 {
-    "name": "restberry-express",
-    "version": "0.1.0",
-    "description": "",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/materik/restberry-express.git"
-    },
-    "keywords": [
-        "express",
-        "restberry"
-    ],
     "author": {
         "name": "Mattias Eriksson",
         "email": "materik@me.com"
+    },
+    "bugs": {
+        "url": "https://github.com/materik/restberry-express/issues"
     },
     "contributors": [
         {
@@ -21,13 +12,22 @@
             "email": "materik@me.com"
         }
     ],
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/materik/restberry-express/issues"
-    },
     "dependencies": {
         "express": "3.4.x",
         "restberry-modules": "0.1.x"
     },
+    "description": "Express wrapper for Restberry WAF",
     "homepage": "http://restberry.com"
+    "keywords": [
+        "express",
+        "restberry"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "restberry-express",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/materik/restberry-express.git"
+    },
+    "version": "0.1.0"
 }
