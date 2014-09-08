@@ -14,10 +14,12 @@
     ],
     "dependencies": {
         "express": "3.4.x",
-        "restberry-modules": "0.1.x"
+        "restberry-errors": "0.1.x",
+        "restberry-modules": "0.1.x",
+        "underscore": "1.5.x"
     },
     "description": "Express wrapper for Restberry WAF",
-    "homepage": "http://restberry.com"
+    "homepage": "http://restberry.com",
     "keywords": [
         "express",
         "restberry"
