@@ -17,6 +17,11 @@ RestberryExpress.prototype.del = function() {
     app.del.apply(app, arguments);
 };
 
+RestberryExpress.prototype.delete = function() {
+    var app = this.app;
+    app.delete.apply(app, arguments);
+};
+
 RestberryExpress.prototype.get = function() {
     var app = this.app;
     app.get.apply(app, arguments);
