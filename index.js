@@ -12,11 +12,6 @@ function RestberryExpress() {
 
 RestberryExpress.prototype.__proto__ = modules.waf.prototype;
 
-RestberryExpress.prototype.del = function() {
-    var app = this.app;
-    app.del.apply(app, arguments);
-};
-
 RestberryExpress.prototype.delete = function() {
     var app = this.app;
     app.delete.apply(app, arguments);
