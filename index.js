@@ -5,7 +5,8 @@ var express = require('express');
 var modules = require('restberry-modules');
 
 
-function RestberryExpress() {
+function RestberryExpress(req, res) {
+    this.setReqAndRes(req, res);
     this.express = express;
     this.app = null;
 };
@@ -37,7 +38,9 @@ RestberryExpress.prototype.put = function() {
 };
 
 RestberryExpress.prototype.res = function(code, data) {
-    this._res.status(code).json(data);
+    if (!this._res._headerSent) {
+        this._res.status(code).json(data);
+    }
 };
 
 RestberryExpress.prototype.use = function(next) {
