@@ -1,9 +1,7 @@
 var _ = require('underscore');
 var bodyParser = require('body-parser');
-var errors = require('restberry-errors');
 var express = require('express');
 var modules = require('restberry-modules');
-
 
 function RestberryExpress(req, res) {
     this.setReqAndRes(req, res);
