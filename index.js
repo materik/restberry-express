@@ -3,8 +3,22 @@ var bodyParser = require('body-parser');
 var express = require('express');
 
 function RestberryExpress() {
+    this._configured = false;
     this.express = express;
     this.app = null;
+};
+
+RestberryExpress.prototype.config = function(next) {
+    if (!this._configured) {
+        this._configured = true;
+        var app = express();
+        app.use(bodyParser.json());
+        this.app = app;
+        if (next) {
+            next(this);
+        }
+    }
+    return this;
 };
 
 RestberryExpress.prototype.delete = function() {
@@ -33,16 +47,6 @@ RestberryExpress.prototype.put = function() {
 
 RestberryExpress.prototype.res = function(code, data) {
     this._res.status(code).json(data);
-};
-
-RestberryExpress.prototype.use = function(next) {
-    var app = express();
-    app.use(bodyParser.json());
-    this.app = app;
-    if (next) {
-        next(this);
-    }
-    return this;
 };
 
 module.exports = exports = new RestberryExpress;
