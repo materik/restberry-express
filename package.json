@@ -15,7 +15,6 @@
     "dependencies": {
         "body-parser": "1.12.x",
         "express": "4.12.x",
-        "restberry-modules": "0.2.x",
         "underscore": "1.8.x"
     },
     "description": "Express wrapper for Restberry WAF",
@@ -31,5 +30,5 @@
         "type": "git",
         "url": "https://github.com/materik/restberry-express.git"
     },
-    "version": "4.12.4"
+    "version": "4.12.10"
 }

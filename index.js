@@ -1,15 +1,11 @@
 var _ = require('underscore');
 var bodyParser = require('body-parser');
 var express = require('express');
-var modules = require('restberry-modules');
 
-function RestberryExpress(req, res) {
-    this.setReqAndRes(req, res);
+function RestberryExpress() {
     this.express = express;
     this.app = null;
 };
-
-RestberryExpress.prototype.__proto__ = modules.waf.prototype;
 
 RestberryExpress.prototype.delete = function() {
     var app = this.app;
@@ -36,18 +32,17 @@ RestberryExpress.prototype.put = function() {
 };
 
 RestberryExpress.prototype.res = function(code, data) {
-    if (!this._res._headerSent) {
-        this._res.status(code).json(data);
-    }
+    this._res.status(code).json(data);
 };
 
 RestberryExpress.prototype.use = function(next) {
-    var self = this;
     var app = express();
     app.use(bodyParser.json());
-    self.app = app;
-    if (next)  next(self);
-    return self;
+    this.app = app;
+    if (next) {
+        next(this);
+    }
+    return this;
 };
 
 module.exports = exports = new RestberryExpress;
