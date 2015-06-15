@@ -3,7 +3,7 @@ Restberry-Express
 
 [![](https://img.shields.io/npm/v/restberry-express.svg)](https://www.npmjs.com/package/restberry-express) [![](https://img.shields.io/npm/dm/restberry-express.svg)](https://www.npmjs.com/package/restberry-express)
 
-Express wrapper for Restberry.
+Restberry WAF wrapper for express.
 
 ## Install
 

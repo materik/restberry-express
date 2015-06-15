@@ -17,7 +17,7 @@
         "express": "4.12.x",
         "underscore": "1.8.x"
     },
-    "description": "Express wrapper for Restberry WAF",
+    "description": "Restberry WAF wrapper for express",
     "homepage": "http://restberry.com",
     "keywords": [
         "express",
@@ -30,5 +30,5 @@
         "type": "git",
         "url": "https://github.com/materik/restberry-express.git"
     },
-    "version": "4.12.11"
+    "version": "4.12.12"
 }
