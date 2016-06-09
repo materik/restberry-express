@@ -32,7 +32,7 @@ RestberryExpress.prototype.get = function() {
 };
 
 RestberryExpress.prototype.listen = function(port, next) {
-    this.app.listen(port, next);
+    return this.app.listen(port, next);
 };
 
 RestberryExpress.prototype.post = function() {
